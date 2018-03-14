@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Scanner;
 
 class MazelSecondTask {
-    private int stepsToExit;
     private Map<Integer, Integer> stepsMap;
 
     public MazelSecondTask(String fileName) {
@@ -24,15 +23,15 @@ class MazelSecondTask {
         }
     }
     public int amountOfSteps() {
-        stepsToExit = 0;
+        int stepsToExit = 0;
         int element = 0;
-        int offset, q;
+        int offset, keyInMap;
         while (element >= 0 && element < stepsMap.size()) {
             offset = stepsMap.get(element);
-            q = element;
+            keyInMap = element;
             element += offset;
-            if(offset>=3) stepsMap.put(q, offset-1);
-            else stepsMap.put(q, offset+1);
+            if(offset>=3) stepsMap.put(keyInMap, offset-1);
+            else stepsMap.put(keyInMap, offset+1);
             stepsToExit++;
         }
         return stepsToExit;

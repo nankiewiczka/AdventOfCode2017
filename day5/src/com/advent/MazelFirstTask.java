@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Scanner;
 
 class MazelFirstTask {
-    private int stepsToExit;
     private Map<Integer, Integer> stepsMap;
 
     public MazelFirstTask(String fileName) {
@@ -26,7 +25,7 @@ class MazelFirstTask {
     }
 
     public int amountOfSteps() {
-        stepsToExit = 0;
+        int stepsToExit = 0;
         int element = 0;
         int offset, keyInMap;
         while (element >= 0 && element < stepsMap.size()) {
