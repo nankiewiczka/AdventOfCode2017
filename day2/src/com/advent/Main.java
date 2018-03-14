@@ -1,4 +1,4 @@
-package com.company;
+package com.advent;
 
 public class Main {
     private static String fileName = "/home/karolina/Documents/AdventOfCode2017/day2/data.txt";
